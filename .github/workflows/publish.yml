@@ -15,7 +15,7 @@ jobs:
       - name: Create a Dockerfile
         shell: bash
         run: |
-          echo 'FROM alpine' > Dockerfile
+          echo 'FROM mcr.microsoft.com/windows/nanoserver' > Dockerfile
           echo 'ENTRYPOINT ["echo", "Hello from ${{ github.repository }}!"]' >> Dockerfile
 
       - name: Build image
